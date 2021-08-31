@@ -1,6 +1,5 @@
 import React from "react";
-import computerIcon from "./images/computerIcon.png";
-import { useState, useEffect, useRef } from "react";
+import computerIcon from "../images/computerIcon.png";
 import Draggable from "react-draggable"; // The default
 
 const Window = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import startLogo from "./images/startLogo.png";
+import startLogo from "../images/startLogo.png";
 import StartToolbar from "./StartTooolbar";
 import { useState } from "react";
 

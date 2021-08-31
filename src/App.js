@@ -1,9 +1,9 @@
 import React from "react";
-import Window from "./Window";
-import Toolbar from "./Toolbar";
-import Homescreen from "./Homescreen";
-import StartToolbar from "./StartTooolbar";
-import { useState } from "react";
+import Window from "./components/Window";
+import Toolbar from "./components/Toolbar";
+import Homescreen from "./components/Homescreen";
+import StartToolbar from "./components/StartTooolbar";
+
 const App = () => {
   return (
     <div>

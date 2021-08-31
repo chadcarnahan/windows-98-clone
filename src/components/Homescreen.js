@@ -1,5 +1,5 @@
 import React from "react";
-import icons from "./data";
+import icons from "../data";
 import Draggable from "react-draggable"; // The default
 
 const Homescreen = () => {
@@ -9,7 +9,7 @@ const Homescreen = () => {
         <Draggable>
           <button>
             <img
-              src={require("./images/" + image.image + ".png").default}
+              src={require("../images/" + image.image + ".png").default}
               key={index}
               alt="info"
             ></img>

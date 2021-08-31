@@ -1,5 +1,5 @@
 import React from "react";
-import icons from "./data";
+import icons from "../data";
 
 const StartToolbar = ({ showStart }) => {
   if (showStart) {
@@ -25,7 +25,7 @@ const StartToolbar = ({ showStart }) => {
                 <img
                   height="20px"
                   width="20px"
-                  src={require("./images/" + image.image + ".png").default}
+                  src={require("../images/" + image.image + ".png").default}
                   key={index}
                   alt="info"
                 ></img>
