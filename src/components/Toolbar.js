@@ -1,11 +1,11 @@
 import React from "react";
 import startLogo from "../images/startLogo.png";
 import StartToolbar from "./StartTooolbar";
+import shutDown from "../images/shutDown.png";
 import { useState } from "react";
 
-const Toolbar = () => {
+const Toolbar = ({ toggleModal, setToggleModal }) => {
   const [showStart, setShowStart] = useState(false);
-  console.log(showStart);
   const date = new Date();
   const dateString =
     date.getHours() <= 12
@@ -25,12 +25,31 @@ const Toolbar = () => {
           <div className="line-thin"></div>
           <div className="line-thin line-thin-shadow"></div>
           <div className="line-thick"></div>
+          {toggleModal && (
+            <button
+              className={`${
+                showStart ? "btn-tb btn-wide" : "btn-wide btn-tb btn-tb-pressed"
+              }`}
+            >
+              <img
+                height="20px"
+                width="20px"
+                src={shutDown}
+                alt="shut down"
+              ></img>
+              <p>Shut Down</p>
+            </button>
+          )}
         </div>
         <div className="time">
           <p>{dateString}</p>
         </div>
       </footer>
-      <StartToolbar showStart={showStart} />
+      <StartToolbar
+        showStart={showStart}
+        setShowStart={setShowStart}
+        setToggleModal={setToggleModal}
+      />
     </div>
   );
 };

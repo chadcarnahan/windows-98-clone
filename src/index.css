@@ -16,7 +16,9 @@ body {
 }
 
 .window {
-  margin: auto;
+  position: fixed;
+  left: 30%;
+  top: 20%;
   background-color: #c0bfc1;
   height: 230px;
   width: 400px;
@@ -87,7 +89,7 @@ body {
 .btn-wide {
   font-family: inherit;
   display: flex;
-  height: 25px;
+  height: 28px;
   width: 90px;
   background-color: #cfccce;
   justify-content: center;
@@ -103,7 +105,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 30px;
+  height: 35px;
   bottom: 0;
   width: 100%;
   border-top: solid 1px white;
@@ -126,6 +128,25 @@ body {
   margin-left: 5px;
   font-weight: 900;
   font-size: 16px;
+}
+
+.btn-tb {
+  margin-left: 5px;
+  width: 250px;
+  justify-content: start;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.btn-tb-pressed {
+  background-color: #dee2e3;
+  box-shadow: 0px 0px 2px 1px black;
+  border: 1mm inset white;
+}
+
+.btn-tb img {
+  margin-right: 5px;
 }
 
 .btn-start img {
@@ -170,15 +191,11 @@ body {
 }
 
 .icon-grid {
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 10px;
-  grid-area: main;
-  align-content: start;
-  height: 80%;
-  width: 80px;
-  left: 0;
-  top: 0;
+  display: grid;
+  height: auto;
+  grid-template-rows: repeat(5, 125px);
+  grid-template-columns: repeat(2, 125px);
+  grid-auto-flow: column;
 }
 
 .icon-grid img {

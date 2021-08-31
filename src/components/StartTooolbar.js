@@ -1,27 +1,42 @@
 import React from "react";
 import icons from "../data";
 
-const StartToolbar = ({ showStart }) => {
+const StartToolbar = ({ showStart, setToggleModal, setShowStart }) => {
+  const displayModal = (text) => {
+    if (text === "Shut Down") {
+      setToggleModal(true);
+      setShowStart(false);
+    }
+  };
+
   if (showStart) {
     return (
-      <div className="startBar">
+      <div
+        className="startBar"
+        id="startBar"
+        onMouseLeave={() => setShowStart(false)}
+      >
         <div className="logo">Windows98</div>
         <div className="startButtons">
           {icons.map((image, index) => (
-            <div index={index}>
+            <div index={index} key={index}>
               <div
                 className={`${
-                  image.text === "Network" ? "border-black" : "none"
+                  image.text === "Shut Down" ? "border-black" : "none"
                 }`}
               ></div>
               <div
                 className={`${
-                  image.text === "Network" ? "border-white" : "none"
+                  image.text === "Shut Down" ? "border-white" : "none"
                 }`}
               >
                 {" "}
               </div>
-              <button className="btn-start-toolbar" id={image.text}>
+              <button
+                className="btn-start-toolbar"
+                id={image.text}
+                onClick={() => displayModal(image.text)}
+              >
                 <img
                   height="20px"
                   width="20px"
@@ -33,13 +48,6 @@ const StartToolbar = ({ showStart }) => {
               </button>
             </div>
           ))}
-
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
         </div>
       </div>
     );
