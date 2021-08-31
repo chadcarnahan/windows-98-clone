@@ -1,7 +1,11 @@
 import React from "react";
 import startLogo from "./images/startLogo.png";
+import StartToolbar from "./StartTooolbar";
+import { useState } from "react";
 
 const Toolbar = () => {
+  const [showStart, setShowStart] = useState(false);
+  console.log(showStart);
   const date = new Date();
   const dateString =
     date.getHours() <= 12
@@ -12,7 +16,10 @@ const Toolbar = () => {
     <div>
       <footer className="toolbar">
         <div className="start-toolbar">
-          <button className="btn-wide btn-start">
+          <button
+            onClick={() => setShowStart(!showStart)}
+            className="btn-wide btn-start"
+          >
             <img height="20px" width="20px" src={startLogo} alt="start" /> Start
           </button>
           <div className="line-thin"></div>
@@ -23,6 +30,7 @@ const Toolbar = () => {
           <p>{dateString}</p>
         </div>
       </footer>
+      <StartToolbar showStart={showStart} />
     </div>
   );
 };

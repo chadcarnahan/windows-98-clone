@@ -106,6 +106,15 @@ body {
   height: 30px;
   bottom: 0;
   width: 100%;
+  border-top: solid 1px white;
+}
+
+.border {
+  position: fixed;
+  bottom: 1;
+  width: 100%;
+  background-color: white;
+  height: 1px;
 }
 
 .start-toolbar {
@@ -196,4 +205,66 @@ body {
 .icon-grid button:focus {
   background-color: blue;
   opacity: 50%;
+}
+
+.startBar {
+  background-color: #bfc7c9;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 25px;
+  width: 230px;
+  height: 330px;
+  box-shadow: 1px 2px 2px black;
+  border: 1.5px outset white;
+}
+.logo {
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background-color: #888890;
+  color: hsl(200, 7%, 74%);
+  height: auto;
+  width: auto;
+  font-size: 30px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btn-start-toolbar {
+  background-color: #bfc7c9;
+  width: 202px;
+  height: 54px;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-family: "windows98";
+  font-size: 15px;
+}
+
+.btn-start-toolbar img {
+  margin-right: 5px;
+}
+
+.btn-start-toolbar:hover {
+  background-color: #0a246a;
+  color: white;
+}
+
+.border-white {
+  width: 198px;
+  height: 1px;
+  background-color: white;
+}
+
+.border-black {
+  width: 198px;
+  height: 1px;
+  background-color: black;
 }
